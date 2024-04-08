@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_all_friends">
+
+    <fragment
+        android:id="@+id/navigation_all_friends"
+        android:name="com.example.notesbook_tabyldievawin_1_22.ui.home.AllFriendsFragment"
+        android:label="all_friends"
+        tools:layout="@layout/fragment_all_friends" />
+
+    <fragment
+        android:id="@+id/navigation_input"
+        android:name="com.example.notesbook_tabyldievawin_1_22.ui.dashboard.InputFragment"
+        android:label="input"
+        tools:layout="@layout/fragment_input" >
+        <action
+            android:id="@+id/action_navigation_input_to_navigation_all_friends"
+            app:destination="@id/navigation_all_friends" />
+    </fragment>
+
+</navigation>
